@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Milloniare Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+    <h3>WHO WANTS TO BE A MILLONIARE GAME</h3>
+        <!--levels of question-->
+        <ul id="levels">
+            <li data-amt="32000" data-lvl="10">&#8358;1,000,000</li>
+            <li data-amt="16000" data-lvl="9">&#8358;900,000</li>
+            <li data-amt="8000" data-lvl="8">&#8358;800,000</li>
+            <li data-amt="4000" data-lvl="7">&#8358;700,000</li>
+            <li data-amt="2000" data-lvl="6">&#8358;600,000</li>
+            <li data-amt="1000" data-lvl="5">&#8358;500,000</li>
+            <li data-amt="500" data-lvl="4">&#8358;400,000</li>
+            <li data-amt="300" data-lvl="3">&#8358;300,000</li>
+            <li data-amt="200" data-lvl="2">&#8358;200,000</li>
+            <li data-amt="100" data-lvl="1">&#8358;100,000</li>
+        </ul>
+        <!--levels of question-->  
+        <div id="quizContainer">
+            <div class="title">Questions</div>
+            <div id="question" class="question"></div>
+            
+                <label class="option"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
+                <label class="option"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+                <label class="option"><input type="radio" name="option" value="3" /> <span id="opt3"></span></label>
+                <label class="option"><input type="radio" name="option" value="4" /> <span id="opt4"></span></label>
+                
+            <div class="lifeline">
+                <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">NextQuestion</button>
+                <p class="Amount" id="amt">Amount : &#8358;0</p>
+                <button class="fifty-fifty" id="fifty" onclick="action()">50/50</button>
+            <button class="walk-away" id="walk" onclick="act()">Walk away</button>
+            </div>
+               
+        </div>
+        <div id="result" class="container result" style="display: none;">    
+        </div>
+        
+        
+    <script src="question.js"></script>
+    <script src="main.js"></script>                       
+</body>
+</html>
